@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Your Jiii</title>
+        <link rel="icon" type="image/x-icon" href="full-moon.png">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible " content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <audio id="musicSurprice" src="salamin.mp3" controls></audio>
+        <audio id="background-audio" src="Timothée Chalamet - Pure Imagination (Lyrics) from Wonka.mp3" controls></audio>
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+        <div class="moon">
+            <video autoplay loop muted plays-inline>
+                <source src="moon.mp4" type="video/mp4">
+            </video>
+        </div>
+        <section id="shootingStar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </section>
+        <button onclick="showDivs()" type="button" class="button">
+            <i class="fa-solid fa-heart fa-fade fa-2xl" style="color: #ffffff;"></i>
+        </button>
+        <div class="messagebox" id="messages">
+            <h1>Hi eyaaa</h1>
+            <h3 id="fText">I know this is late but, congrats on passing this academic year. You did well, Eya. I'm so proud of you.</h3>
+            <button onclick="playMusic()" type="button" id="surpBTN" class="surBTN">
+                <i class="fa-solid fa-message fa-fade fa-2xl" style="color: #ffffff;" id="openGift"></i>
+                <i class="fa-solid fa-volume-xmark fa-beat fa-2xl" style="color: white; display: none;" id="offMusic"></i>
+            </button>
+            <!-- <h1>Congrats on passing this academic year. You did well, Eya. I'm so proud of you.</h1> -->
+        </div>
+        <script src="javas.js"></script>
+    </body>
+</html>

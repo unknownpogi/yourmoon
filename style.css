@@ -1,0 +1,595 @@
+
+@keyframes move-twink-back{
+    from {background-position: 0 0;}
+    to {background-position: -10000px 5000px;}
+}
+
+@keyframes move-clouds-back{
+    from {background-position: 0 0;}
+    to {background-position: -10000px 5000px;}
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+
+.stars,.twinkling,.clouds,.shooting{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: block;
+}
+
+.stars{
+    background: #000 url(https://i.imgur.com/PDOw7k2.png) top center;
+    z-index: 0;
+}
+
+.twinkling{
+    background: transparent url(https://i.imgur.com/aljoapq.png) repeat top center;
+    z-index: 1;
+    animation: move-twink-back 200s linear infinite;
+}
+
+.clouds{
+    background: transparent url(https://i.imgur.com/6YfrPKS.png);
+    z-index: 3;
+    animation: move-clouds-back 200s infinite;
+}
+span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 4;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+    0 0 0 5px rgba(255, 255, 255, 0.1),
+    0 0 20px rgba(255, 255, 255, 1);
+    animation: animate 3s linear infinite;
+}
+
+span::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+    transform: translateY(-50%);
+
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
+}
+
+span:nth-child(1){
+    top: 0;
+    right: 0;
+    left: initial;
+    animation-delay: 0;
+    animation-duration: 1s;
+}
+
+span:nth-child(2){
+    top: 0;
+    right: 80px;
+    left: initial;
+    animation-delay: 0.2;
+    animation-duration: 3s;
+}
+
+span:nth-child(3){
+    top: 80px;
+    right: 0px;
+    left: initial;
+    animation-delay: 0.4;
+    animation-duration: 2s;
+}
+
+span:nth-child(4){
+    top: 0px;
+    right: 180px;
+    left: initial;
+    animation-delay: 0.6;
+    animation-duration: 1.5s;
+}
+
+span:nth-child(5){
+    top: 0px;
+    right: 400px;
+    left: initial;
+    animation-delay: 0.8;
+    animation-duration: 2.5s;
+}
+
+span:nth-child(6){
+    top: 0px;
+    right: 600px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+
+span:nth-child(7){
+    top: 300px;
+    right: 0px;
+    left: initial;
+    animation-delay: 1.2s;
+    animation-duration: 1.75s;
+}
+
+span:nth-child(8){
+    top: 0px;
+    right: 700px;
+    left: initial;
+    animation-delay: 1.4s;
+    animation-duration: 1.25s;
+}
+
+span:nth-child(9){
+    top: 0px;
+    right: 900px;
+    left: initial;
+    animation-delay: 0.2s;
+    animation-duration: 2s;
+}
+
+span:nth-child(10){
+    top: 300px;
+    right: 200px;
+    left: initial;
+    animation-delay: 1;
+    animation-duration: 1s;
+}
+
+.moon{
+    width: 900px;
+    height: 900px;
+    position: fixed;
+    bottom: -510px;
+    left: -120px;
+    margin: 0;
+    overflow: hidden;
+    z-index: 5;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px transparent inset, 0 0 20px;
+}
+
+/* .moon::after{
+    position: absolute;
+    content: "";
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 10;
+    border-color: white;
+    border-radius: 50%;
+    box-shadow: -40px -40px 50px 2px white inset;
+} */
+
+.moon > video{
+    width: 100%;
+    height: 100%;
+    animation: spin 5s linear alternate infinite;
+    object-fit: cover;
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.button{
+    position: fixed;
+    z-index: 5;
+    width: 90px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    margin-top: 50px;
+    margin-right: 20px;
+    border-radius: 10px;
+    background: #ffffff10;
+    border-color: #ffffff10;
+    color: #fff;
+}
+
+/* .button::after{
+    content: '';
+    position: fixed;
+    z-index: 5;
+    width: 90px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    margin-top: 50px;
+    margin-right: 20px;
+    background-color: red;
+} */
+
+.messagebox{
+    position: absolute;
+    width: 500px;
+    height: 380px;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    border-radius: 20px;
+    background-color: #ffffff10;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+.messagebox h1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #808080;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.messagebox h3{
+    position: absolute;
+    color: #808080;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.messagebox .surBTN{
+    position: fixed;
+    width: 90px;
+    height: 50px;
+    bottom: 0;
+    background: transparent;
+    right: 0;
+    border-color: #ffffff10;
+    border-radius: 30px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+}
+
+/* @keyframes spin{
+    to{
+        transform: translateX(-50%);
+    }
+} */
+
+@media (max-width: 640px) and (orientation: landscape) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        overflow: hidden;
+    }
+
+    .moon{
+        width: 500px;
+        height: 500px;
+        position: fixed;
+        bottom: -180px;
+        left: -130px;
+        margin: 0;
+        overflow: hidden;
+        z-index: 5;
+        border-radius: 50%;
+        box-shadow: 0 0 20px 20px transparent inset, 0 0 20px;
+    }
+
+    .button{
+        position: fixed;
+        z-index: 5;
+        width: 80px;
+        height: 40px;
+        top: 0;
+        right: 0;
+        margin-top: 50px;
+        margin-right: 20px;
+        border-radius: 10px;
+        background: #ffffff10;
+        border-color: #ffffff10;
+        color: #fff;
+    }
+
+    .messagebox{
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        z-index: 6;
+        border-radius: 20px;
+        top: 50%;
+        left: 50%;
+        right: 50%;
+        background-color: #ffffff10;
+        transform: translate(-50%, -50%);
+        backdrop-filter: blur(5px);
+        text-align: center;
+    }
+
+    .messagebox h1{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #808080;
+        font-size: 20px;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .messagebox h3{
+        position: absolute;
+        color: #808080;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 15px;
+    }
+
+    .messagebox .surBTN{
+        position: fixed;
+        width: 79px;
+        height: 48px;
+        bottom: 0;
+        background: transparent;
+        right: 0;
+        border-color: #ffffff10;
+        border-radius: 30px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        overflow: hidden;
+    }
+
+    .moon{
+        width: 500px;
+        height: 500px;
+        position: fixed;
+        bottom: -180px;
+        left: -130px;
+        margin: 0;
+        overflow: hidden;
+        z-index: 5;
+        border-radius: 50%;
+        box-shadow: 0 0 20px 20px transparent inset, 0 0 20px;
+    }
+
+    .button{
+        position: fixed;
+        z-index: 5;
+        width: 80px;
+        height: 40px;
+        top: 0;
+        right: 0;
+        margin-top: 50px;
+        margin-right: 20px;
+        border-radius: 10px;
+        background: #ffffff10;
+        border-color: #ffffff10;
+        color: #fff;
+    }
+
+    .messagebox{
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        z-index: 6;
+        border-radius: 20px;
+        top: 40%;
+        left: 50%;
+        right: 50%;
+        background-color: #ffffff10;
+        transform: translate(-50%, -50%);
+        backdrop-filter: blur(5px);
+        text-align: center;
+    }
+
+    .messagebox h1{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #808080;
+        font-size: 20px;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .messagebox h3{
+        position: absolute;
+        color: #808080;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 15px;
+    }
+
+    .messagebox .surBTN{
+        position: fixed;
+        width: 79px;
+        height: 48px;
+        bottom: 0;
+        background: transparent;
+        right: 0;
+        border-color: #ffffff10;
+        border-radius: 30px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+    .moon{
+        width: 500px;
+        height: 500px;
+        position: fixed;
+        bottom: -200px;
+        left: -180px;
+        margin: 0;
+        overflow: hidden;
+        z-index: 5;
+        border-radius: 50%;
+        box-shadow: 0 0 20px 20px transparent inset, 0 0 20px;
+    }
+
+    .button{
+        position: fixed;
+        z-index: 5;
+        width: 80px;
+        height: 40px;
+        top: 0;
+        right: 0;
+        margin-top: 50px;
+        margin-right: 20px;
+        border-radius: 10px;
+        background: #ffffff10;
+        border-color: #ffffff10;
+        color: #fff;
+    }
+
+    .messagebox{
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        z-index: 6;
+        border-radius: 20px;
+        top: 50%;
+        left: 60%;
+        background-color: #ffffff10;
+        transform: translate(-50%, -50%);
+        backdrop-filter: blur(5px);
+        text-align: center;
+    }
+
+    .messagebox h1{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #808080;
+        font-size: 20px;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .messagebox h3{
+        position: absolute;
+        color: #808080;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        overflow: hidden;
+    }
+
+    .moon{
+        width: 500px;
+        height: 500px;
+        position: fixed;
+        bottom: -80px;
+        left: -200px;
+        margin: 0;
+        overflow: hidden;
+        z-index: 5;
+        border-radius: 50%;
+        box-shadow: 0 0 20px 20px transparent inset, 0 0 20px;
+    }
+
+    .button{
+        position: fixed;
+        z-index: 5;
+        width: 80px;
+        height: 40px;
+        top: 0;
+        right: 0;
+        margin-top: 50px;
+        margin-right: 20px;
+        border-radius: 10px;
+        background: #ffffff10;
+        border-color: #ffffff10;
+        color: #fff;
+    }
+
+    .messagebox{
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        z-index: 6;
+        border-radius: 20px;
+        top: 40%;
+        left: 50%;
+        right: 50%;
+        background-color: #ffffff10;
+        transform: translate(-50%, -50%);
+        backdrop-filter: blur(5px);
+        text-align: center;
+    }
+
+    .messagebox h1{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #808080;
+        font-size: 20px;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .messagebox h3{
+        position: absolute;
+        color: #808080;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 15px;
+    }
+}
