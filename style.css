@@ -6,8 +6,6 @@
 
 html, body {
     overflow: hidden;
-    width: 100%;
-    height: 100%;
 }
 
 .stars,.twinkling,.clouds,.shooting{
@@ -17,13 +15,11 @@ html, body {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 100%;
     display: block;
 }
 
 .stars {
     background: #000 url(https://i.imgur.com/PDOw7k2.png) top center;
-    background-size: cover;
 }
 
 @keyframes move-twink-back{
@@ -34,7 +30,6 @@ html, body {
 .twinkling{
     background: transparent url(https://i.imgur.com/aljoapq.png) repeat top center;
     animation: move-twink-back 200s linear infinite;
-    background-size: cover;
 }
 
 @keyframes move-clouds-back{
@@ -90,8 +85,187 @@ span::before{
     }
 }
 
-@media only screen and (min-width: 721px) {
-    .stars{
-        display: none;
+span:nth-child(1){
+    top: 0;
+    right: 0;
+    left: initial;
+    animation-delay: 0;
+    animation-duration: 1s;
+}
+
+span:nth-child(2){
+    top: 0;
+    right: 80px;
+    left: initial;
+    animation-delay: 0.2;
+    animation-duration: 3s;
+}
+
+span:nth-child(3){
+    top: 80px;
+    right: 0px;
+    left: initial;
+    animation-delay: 0.4;
+    animation-duration: 2s;
+}
+
+span:nth-child(4){
+    top: 0px;
+    right: 180px;
+    left: initial;
+    animation-delay: 0.6;
+    animation-duration: 1.5s;
+}
+
+span:nth-child(5){
+    top: 0px;
+    right: 400px;
+    left: initial;
+    animation-delay: 0.8;
+    animation-duration: 2.5s;
+}
+
+.moon{
+    width: 900px;
+    height: 900px;
+    position: fixed;
+    bottom: -510px;
+    left: -120px;
+    margin: 0;
+    overflow: hidden;
+    z-index: 5;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px transparent inset, 0 0 20px;
+}
+
+.moon > video{
+    width: 100%;
+    height: 100%;
+    animation: spin 5s linear alternate infinite;
+    object-fit: cover;
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.buttons{
+    position: fixed;
+    z-index: 5;
+    width: 90px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    margin-top: 50px;
+    margin-right: 20px;
+    border-radius: 10px;
+    background: #ffffff10;
+    border-color: #ffffff10;
+    color: #fff;
+}
+
+.messagebox{
+    position: absolute;
+    width: 500px;
+    height: 380px;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    border-radius: 20px;
+    background-color: #ffffff10;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+.messagebox h1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #808080;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.messagebox h3{
+    position: absolute;
+    color: #808080;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.messagebox .surBTN{
+    position: fixed;
+    width: 90px;
+    height: 50px;
+    bottom: 0;
+    background: transparent;
+    right: 0;
+    border-color: #ffffff10;
+    border-radius: 30px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+}
+
+#musicSurprice{
+    display: none;
+}
+
+#background-audio{
+    display: none;
+}
+
+@media (max-width: 720px) {
+    span:nth-child(1){
+        top: 50%;
+        right: 30%;
+        left: auto;
+        animation-delay: 0;
+        animation-duration: 1.5s;
+    }
+    
+    span:nth-child(2){
+        top: 60%;
+        left: 70%;
+        right: auto;
+        animation-delay: 0.2;
+        animation-duration: 3s;
+    }
+    
+    span:nth-child(3){
+        top: 19%;
+        left: 70%;
+        right: auto;
+        animation-delay: 0.4;
+        animation-duration: 3s;
+    }
+    
+    span:nth-child(4){
+        top: 70%;
+        right: 35%;
+        left: auto;
+        animation-delay: 0.6;
+        animation-duration: 1.5s;
+    }
+    
+    span:nth-child(5){
+        top: 30%;
+        left: 70%;
+        right: auto;
+        animation-delay: 0.8;
+        animation-duration: 2.5s;
+    }
+
+    .moon{
+        width: 900px;
+        height: 900px;
+        position: fixed;
+        bottom: -290px;
+        left: -290px;
+        margin: 0;
+        overflow: hidden;
+        z-index: 5;
+        border-radius: 50%;
+        box-shadow: 0 0 20px 20px transparent inset, 0 0 20px;
     }
 }
