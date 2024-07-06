@@ -89,3 +89,9 @@ span::before{
         opacity: 0;
     }
 }
+
+@media only screen and (max-width: 360px) {
+    .stars{
+        display: none;
+    }
+}
