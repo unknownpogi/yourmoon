@@ -215,7 +215,10 @@ span:nth-child(5){
     display: none;
 }
 
-@media screen and (max-width: 720px) and (max-height: 1600px) {
+@media screen and (min-width: 721px){
+    .twinkling{
+        display: none;
+    }
     span:nth-child(1){
         top: 50%;
         right: 30%;
@@ -257,8 +260,8 @@ span:nth-child(5){
     }
 
     .moon{
-        width: 900px;
-        height: 900px;
+        width: 300px;
+        height: 300px;
         position: fixed;
         bottom: -290px;
         left: -290px;
