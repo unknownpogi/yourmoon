@@ -215,7 +215,7 @@ span:nth-child(5){
     display: none;
 }
 
-@media only screen and (max-width: 720px) {
+@media screen and (max-width: 720px) {
     span:nth-child(1){
         top: 50%;
         right: 30%;
