@@ -14,6 +14,30 @@
         <div class="clouds"></div>
         <section id="shootingStar">
             <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </section>
+        <div class="moon">
+            <video autoplay loop muted plays-inline>
+                <source src="moon.mp4" type="video/mp4">
+            </video>
+        </div>
+        <button onclick="showDivs()" type="button" class="buttons">
+            <i class="fa-solid fa-heart fa-fade fa-2xl" style="color: #ffffff;"></i>
+        </button>
+        <div class="messagebox" id="messages">
+            <h1>Hi eyaaa</h1>
+            <h3 id="fText">I know this is late but, congrats on passing this academic year. You did well, Eya. I'm so proud of you.</h3>
+            <button onclick="playMusic()" type="button" id="surpBTN" class="surBTN">
+                <i class="fa-solid fa-message fa-fade fa-2xl" style="color: #ffffff;" id="openGift"></i>
+                <i class="fa-solid fa-volume-xmark fa-beat fa-2xl" style="color: white; display: none;" id="offMusic"></i>
+            </button>
+            <!-- <h1>Congrats on passing this academic year. You did well, Eya. I'm so proud of you.</h1> -->
+        </div>
+        <audio id="musicSurprice" src="salamin.mp3" controls></audio>
+        <audio id="background-audio" src="Timothée Chalamet - Pure Imagination (Lyrics) from Wonka.mp3" controls></audio>
+        <script src="javas.js"></script>
     </body>
 </html>
