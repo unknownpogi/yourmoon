@@ -307,7 +307,7 @@ span:nth-child(5){
         color: #808080;
         top: 49%;
         left: 50%;
-        font-size: 15px;
+        font-size: 13px;
         transform: translate(-50%, -50%);
         
     }
@@ -394,6 +394,16 @@ span:nth-child(5){
         margin-top: 50px;
         margin-right: 20px;
         border-radius: 10px;
+    }
+
+    .messagebox h3{
+        position: absolute;
+        color: #808080;
+        top: 49%;
+        left: 50%;
+        font-size: 13px;
+        transform: translate(-50%, -50%);
+        
     }
 
 
@@ -494,7 +504,7 @@ span:nth-child(5){
         color: #808080;
         top: 49%;
         left: 50%;
-        font-size: 15px;
+        font-size: 13px;
         transform: translate(-50%, -50%);
         
     }
@@ -556,6 +566,16 @@ span:nth-child(5){
         border-radius: 50%;
         box-shadow: 0 0 20px 20px transparent inset, 0 0 20px;
     }
+
+    .messagebox h3{
+        position: absolute;
+        color: #808080;
+        top: 49%;
+        left: 50%;
+        font-size: 13px;
+        transform: translate(-50%, -50%);
+        
+    }
 }
 
 @media (min-width: 556px) and (max-width: 621px) {
@@ -613,6 +633,16 @@ span:nth-child(5){
         overflow: hidden;
         border-radius: 50%;
         box-shadow: 0 0 20px 20px transparent inset, 0 0 20px;
+    }
+
+    .messagebox h3{
+        position: absolute;
+        color: #808080;
+        top: 49%;
+        left: 50%;
+        font-size: 13px;
+        transform: translate(-50%, -50%);
+        
     }
 }
 
@@ -672,6 +702,16 @@ span:nth-child(5){
         border-radius: 50%;
         box-shadow: 0 0 20px 20px transparent inset, 0 0 20px;
     }
+
+    .messagebox h3{
+        position: absolute;
+        color: #808080;
+        top: 49%;
+        left: 50%;
+        font-size: 13px;
+        transform: translate(-50%, -50%);
+        
+    }
 }
 
 @media (min-width: 688px) and (max-width: 753px) {
@@ -730,6 +770,15 @@ span:nth-child(5){
         border-radius: 50%;
         box-shadow: 0 0 20px 20px transparent inset, 0 0 20px;
     }
+    .messagebox h3{
+        position: absolute;
+        color: #808080;
+        top: 49%;
+        left: 50%;
+        font-size: 13px;
+        transform: translate(-50%, -50%);
+        
+    }
 }
 
 @media (min-width: 754px) and (max-width: 819px) {
@@ -787,6 +836,16 @@ span:nth-child(5){
         overflow: hidden;
         border-radius: 50%;
         box-shadow: 0 0 20px 20px transparent inset, 0 0 20px;
+    }
+
+    .messagebox h3{
+        position: absolute;
+        color: #808080;
+        top: 49%;
+        left: 50%;
+        font-size: 13px;
+        transform: translate(-50%, -50%);
+        
     }
 }
 
