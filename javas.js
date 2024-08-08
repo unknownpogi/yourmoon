@@ -23,7 +23,7 @@ function showDivs(){
     }
     else{
         divShow.style.display = 'none';
-        firstT.innerHTML = "I know this is late but, congrats on passing this academic year. You did well, Eya. I'm so proud of you.  Goodluck for upcoming academic year!";
+        firstT.innerHTML = "I know this is late, but congratulations on passing this academic year. You did well, Eya. I'm so proud of you. Good luck, and do your best.";
         showss = 0;
     }
 }
@@ -36,7 +36,7 @@ function playMusic(){
         });
         giftss.style.display = 'none';
         offMusicsss.style.display = 'block';
-        firstT.innerHTML = "Gusto ko lang sabihin na gusto kita matagal na"
+        firstT.innerHTML = "Gusto ko lang din sabihin na gusto kita matagal na"
         pauseMus = 1;
     }
     else{
