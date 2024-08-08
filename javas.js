@@ -1,31 +1,3 @@
-// let divShow = document.getElementById("messages");
-// let isShow = 0;
-// divShow.style.display = "none";
-// const audio = document.getElementById('background-audio');
-
-// let starShow = document.getElementById("shootingStar");
-// starShow.style.display = "none";
-
-// function showDivs(){
-//     if(isShow == 1){
-//         divShow.style.display = 'block';
-//         starShow.style.display = 'block';
-//         isShow = 0;
-//     }
-//     else{
-//         divShow.style.display = 'none';
-//         starShow.style.display = 'none';
-//         isShow = 1;
-//     }
-// }
-
-// document.getElementById('surpBTN').addEventListener('click', function() {
-//     const audios = document.getElementById('musicSurprice');
-//     audios.play().catch(error => {
-//         console.log('Audio play failed:', error);
-//     });
-// });
-
 let divShow = document.getElementById("messages");
 let starShow = document.getElementById("shootingStar");
 const audios = document.getElementById('musicSurprice');
@@ -51,8 +23,7 @@ function showDivs(){
     }
     else{
         divShow.style.display = 'none';
-        starShow.style.display = 'none';
-        firstT.innerHTML = "I know this is late but, congrats on passing this academic year. You did well, Eya. I'm so proud of you.";
+        firstT.innerHTML = "I know this is late but, congrats on passing this academic year. You did well, Eya. I'm so proud of you.  Goodluck for upcoming academic year!";
         showss = 0;
     }
 }
