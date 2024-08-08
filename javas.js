@@ -23,7 +23,7 @@ function showDivs(){
     }
     else{
         divShow.style.display = 'none';
-        firstT.innerHTML = "I know this is late, but congratulations on passing this academic year. You did well, Eya. I'm so proud of you. Good luck, and do your best.";
+        firstT.innerHTML = "I know this is late, but congratulations on passing the previous academic year. You did well, Eya. I'm so proud of you. Good luck, and do your best.";
         showss = 0;
     }
 }
